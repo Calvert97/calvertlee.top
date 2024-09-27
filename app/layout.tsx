@@ -14,7 +14,7 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | Calvert Lee',
     default: seo.title,
   },
   description: seo.description,
@@ -34,17 +34,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | Calvert Lee',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'CalvertSite',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://calvertlee.top',
   },
   twitter: {
-    site: '@thecalicastle',
-    creator: '@thecalicastle',
+    site: '@CalvertLee__7',
+    creator: '@CalvertLee__7',
     card: 'summary_large_image',
     title: seo.title,
     description: seo.description,

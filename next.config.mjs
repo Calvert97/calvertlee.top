@@ -25,23 +25,23 @@ const nextConfig = {
     return [
       {
         "source": "/twitter",
-        "destination": "https://x.com/thecalicastle",
+        "destination": "https://x.com/CalvertLee__7",
         "permanent": true
       },
       {
         "source": "/x",
-        "destination": "https://x.com/thecalicastle",
+        "destination": "https://x.com/CalvertLee__7",
         "permanent": true
       },
       {
         "source": "/youtube",
-        "destination": "https://youtube.com/@calicastle",
+        "destination": "https://youtube.com/@calvertlee8290",
         "permanent": true
       },
       {
         "source": "/tg",
         "destination": "https://t.me/cali_so",
-        "permanent": true
+        "permanent": false
       },
       {
         "source": "/linkedin",
@@ -50,12 +50,12 @@ const nextConfig = {
       },
       {
         "source": "/github",
-        "destination": "https://github.com/CaliCastle",
+        "destination": "https://github.com/Calvert97",
         "permanent": true
       },
       {
         "source": "/bilibili",
-        "destination": "https://space.bilibili.com/8350251",
+        "destination": "https://space.bilibili.com/356249730",
         "permanent": true
       }
     ]
