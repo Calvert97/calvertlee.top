@@ -1,7 +1,7 @@
 let ipLocation; // 确保 ipLocation 在全局范围内定义
 
 // 进行 fetch 请求
-fetch('https://api.nsmao.net/api/ipip/query?key=密钥') //申请key:https://api.nsmao.net
+fetch('https://api.nsmao.net/api/ipip/query?key=bWN8MWn0ROqDYkaldjYF6CRRtk') //申请key:https://api.nsmao.net
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -37,7 +37,7 @@ function showWelcome() {
         return;
     }
 
-    let dist = getDistance(111.749181, 40.842585, ipLocation.data.lng, ipLocation.data.lat); // 修改自己的经度（121.413921）纬度（31.089290）
+    let dist = getDistance(109.865475, 39.629288, ipLocation.data.lng, ipLocation.data.lat); // 修改自己的经度（121.413921）纬度（31.089290）
     let pos = ipLocation.data.country;
     let ip = ipLocation.ip;
     let posdesc;
