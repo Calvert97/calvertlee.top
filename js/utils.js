@@ -214,5 +214,8 @@
           }[m])
       ),
   };
-  window.utils = { ...window.utils, ...utilsFn };
+window.utils = { ...window.utils, ...utilsFn };
 })();
+
+
+
