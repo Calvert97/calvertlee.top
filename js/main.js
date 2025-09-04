@@ -191,6 +191,15 @@ const sco = {
   lastWittyWord: "",
   wasPageHidden: false,
   musicPlaying: false,
+  hideCookie: function () {
+    const cookiesWindow = document.getElementById("cookies-window");
+    if (cookiesWindow) {
+        setTimeout(() => {
+            cookiesWindow.classList.add("cw-hide");
+            setTimeout(() => cookiesWindow.style.display = "none", 1000);
+      }, 2500);
+    }
+  },
   scrollTo(elementId) {
     const targetElement = document.getElementById(elementId);
     if (targetElement) {
@@ -922,6 +931,7 @@ window.refreshFn = () => {
     sco.musicBind,
     sco.addNavBackgroundInit,
     sco.refreshWaterFall,
+    sco.hideCookie,
   ].forEach((fn) => fn());
   lazyload.enable && utils.lazyloadImg();
   lightbox &&

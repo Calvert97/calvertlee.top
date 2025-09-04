@@ -4,3 +4,11 @@
     font-weight: normal;  /* 字体粗细 */
     font-style: normal;   /* 字体样式 */
 }
+
+a.cookies-link:hover{
+    color: var(--efu-lighttext);
+}
+
+#cookies-window .cookies-window-content .cookies-link {
+    margin-left: -5px !important; 
+}
