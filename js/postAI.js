@@ -141,23 +141,47 @@
       async function showSummary() {
         document.querySelector('.postAI-icon').removeEventListener('click', showSummary)
         await AItalk('正在为您生成AI摘要，请稍候......')
-        setTimeout(() => {
-          if (PAGE_CONFIG.ai_text) {
-            AItalk(PAGE_CONFIG.ai_text).then(() => {
-              if (!PAGE_CONFIG.ai_text) {
-                document.querySelector('.blinking-cursor').style.display = 'none'
-              } else document.querySelector('.postAI-icon').addEventListener('click', showSummary)
-            })
-          } else {
-            fetchSummary(getTitleAndContent()).then(summary => {
-              AItalk(summary.data.replaceAll('作者', '博主')).then(() => {
-                if (!summary.code) {
-                  document.querySelector('.blinking-cursor').style.display = 'none'
-                } else document.querySelector('.postAI-icon').addEventListener('click', showSummary)
-              })
-            })
+        // 等官方 JS 生成内容
+        if (window.tianliGPT_generate) window.tianliGPT_generate()
+
+        // 轮询或监听 tianliGPT-explanation
+        const checkInterval = setInterval(() => {
+          const explanation = document.querySelector('tianliGPT-explanation')
+          if (explanation && explanation.innerText.trim() !== '') {
+            clearInterval(checkInterval)
+            // 将官方内容显示到 postAI-content
+            AItalk(explanation.innerText.replaceAll('作者', '博主'))
+            // 恢复点击
+            icon.addEventListener('click', showSummary)
           }
-        }, 1000);
+        }, 500)
+
+        // 5 秒超时处理
+        setTimeout(() => {
+          clearInterval(checkInterval)
+          const content = document.querySelector('.postAI-content')
+          if (!content.innerText || content.innerText.includes('请稍候')) {
+            AItalk('官方尚未返回摘要内容，请检查网络或在 HTTPS 页面访问')
+            icon.addEventListener('click', showSummary)
+          }
+        }, 5000)
+        // setTimeout(() => {
+        //   if (PAGE_CONFIG.ai_text) {
+        //     AItalk(PAGE_CONFIG.ai_text).then(() => {
+        //       if (!PAGE_CONFIG.ai_text) {
+        //         document.querySelector('.blinking-cursor').style.display = 'none'
+        //       } else document.querySelector('.postAI-icon').addEventListener('click', showSummary)
+        //     })
+        //   } else {
+        //     fetchSummary(getTitleAndContent()).then(summary => {
+        //       AItalk(summary.data.replaceAll('作者', '博主')).then(() => {
+        //         if (!summary.code) {
+        //           document.querySelector('.blinking-cursor').style.display = 'none'
+        //         } else document.querySelector('.postAI-icon').addEventListener('click', showSummary)
+        //       })
+        //     })
+        //   }
+        // }, 1000);
       }
       document.querySelector('.postAI-icon').addEventListener('click', showSummary)
     }

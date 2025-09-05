@@ -356,7 +356,40 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPjax);
 } else {
     initPjax();
-}</script><!-- google adsense--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fas fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=3.0.20"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+}</script><!-- google adsense--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fas fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=3.0.20"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div>
+    <link rel="stylesheet" href="https://ai.tianli0.top/static/public/postChatUser_summary.min.css">
+    <script>
+        let tianliGPT_key = 'S-THOHXOGDEEQTLHFV';
+        let tianliGPT_postSelector = '#postchat_postcontent';
+        let tianliGPT_Title = '文章摘要';
+        let tianliGPT_postURL = '/^https?://[^/]+/[0-9]{4}/[0-9]{2}/[0-9]{2}/';
+        let tianliGPT_blacklist = '';
+        let tianliGPT_wordLimit = '1000';
+        let tianliGPT_typingAnimate = true;
+        let tianliGPT_theme = 'default';
+        var postChatConfig = {
+          backgroundColor: "#3e86f6",
+          bottom: "16px",
+          left: "16px",
+          fill: "#FFFFFF",
+          width: "44px",
+          frameWidth: "375px",
+          frameHeight: "600px",
+          defaultInput: true,
+          upLoadWeb: true,
+          showInviteLink: true,
+          userTitle: "PostChat",
+          userDesc: "如果你对网站的内容有任何疑问，可以来问我哦～",
+          addButton: true,
+          beginningText: "这篇文章介绍了",
+          userIcon: "https://ai.tianli0.top/static/img/PostChat.webp",
+          userMode: "magic",
+          defaultChatQuestions: ["你好","你是谁"],
+          defaultSearchQuestions: ["视频压缩","设计"]
+        };
+    </script>
+    <script data-postchat_key="S-THOHXOGDEEQTLHFV" src="https://ai.tianli0.top/static/public/tianli_gpt.min.js"></script>
+  </body></html>
         <script>
             const posts = ["2025/08/27/刷视频的我们，是在放松，还是在被牵着走？/","2025/08/20/SVG转字体Logo实践指南（附避坑秘籍）/","2025/07/04/快乐的能力，其实和钱真的有点关系/"];
             function toRandomPost() {
