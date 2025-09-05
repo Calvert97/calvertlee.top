@@ -12,3 +12,80 @@ a.cookies-link:hover{
 #cookies-window .cookies-window-content .cookies-link {
     margin-left: -5px !important; 
 }
+
+
+.postAI-box {
+    display: flex;
+    align-items: start;
+    margin: 25px 0
+}
+
+.postAI-icon {
+    background: var(--efu-secondbg);
+    border: 1px solid var(--efu-main);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.postAI-icon:hover svg {
+    animation: jump .5s
+}
+
+.postAI-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--efu-main)
+}
+
+.postAI-icon svg path {
+    fill: var(--efu-main)
+}
+
+.talk-container {
+    border: 1px solid var(--efu-main);
+    margin-left: 25px;
+    max-width: calc(100% - 65px);
+    border-radius: 8px;
+    position: relative
+}
+
+.talk-container::before {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--efu-main);
+    left: -8px;
+    top: 9px;
+    background: var(--efu-secondbg);
+    border-top: none;
+    border-right: none;
+    transform: rotate(44deg)
+}
+
+.postAI-talk {
+    line-height: 1.7;
+    background: var(--efu-secondbg);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1
+}
+
+.shrink {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+span.postAI-content {
+    z-index: 1;
+    position: relative
+}
