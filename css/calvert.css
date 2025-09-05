@@ -89,3 +89,13 @@ span.postAI-content {
     z-index: 1;
     position: relative
 }
+
+.tianliGPT-explanation{
+    padding: 0 !important;
+    background:none !important;
+    border: none !important;
+}
+
+.postAI-lx {
+  display: none;
+}
